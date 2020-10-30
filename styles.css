@@ -1,0 +1,191 @@
+body {
+    background-color: #E6EBE0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    min-width: 320px;
+}
+.final-message,
+.start-container {
+    width: 300px;
+    background-color: #ED6A5A;
+    color:#E6EBE0;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    border-radius:20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.final-message {
+    display: none;
+}
+
+.start-container {
+    display: block
+}
+
+.final-message .replay-btn,
+.start-container .start-btn {
+    background:  #E6EBE0;
+    border: none;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    font-size: 16px;
+    font-family: inherit;
+    padding: 10px 30px;
+    font-weight: bold;
+    color:  #ED6A5A;
+}
+
+.final-message .replay-btn:hover,
+.start-container .start-btn:hover {
+    cursor: pointer;
+    background: transparent;
+    color: #E6EBE0;
+}
+
+.final-message .replay-btn:focus,
+.start-container .start-btn:focus {
+    outline: none;
+}
+
+.game {
+    display: none;
+    width: 460px;
+    height: 460px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game .card {
+    display: flex;
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.game .card:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+}
+
+.game .css {
+    background-color: #1572B6;
+}
+
+.game .html {
+    background-color: #E34F26;
+}
+
+.game .react {
+    background-color: #61DAFB;
+}
+
+.game .terminal {
+    background-color:#333333;
+}
+
+.game .javascript {
+    background-color: #F7DF1E;
+}
+
+.game .github {
+    background-color: #181717;
+}
+
+.game .vscode {
+    background-color:#007ACC;
+}
+
+.game .npm {
+    background-color: #CB3837;
+}
+
+.game .card.initial-bg {
+    background-color: #9BC1BC;
+}
+
+.game .card.done {
+    cursor: default;
+}
+
+.game svg {
+    display: none;
+    transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    width: 60px;
+    margin: 0 auto;
+}
+
+.game .card.done:hover {
+    cursor: default;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+}
+
+.game .card.flip {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+.game .card.flip svg {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+@media (min-width: 1px) and (max-width: 820px) {
+    .game {
+        justify-content: space-around;
+    }
+    .game .card {
+        width: calc(33% - 10px);
+        height: calc(25% - 10px);
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1px) and (max-width: 640px) {
+    .game .card {
+        width: calc(50% - 10px);
+        height: calc(25% - 10px);
+        margin-bottom: 10px;
+    }
+}
